@@ -1,0 +1,49 @@
+import 'package:escuelait_project/screens/second.dart';
+import 'package:flutter/material.dart';
+import '../utils/constants.dart' as constant;
+
+
+
+class MyApp extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return MaterialApp(
+      home: First(),
+    );
+  }
+
+}
+
+
+
+class First extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    TextEditingController _controller = TextEditingController();
+    // TODO: implement build
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("First"),
+      ),
+      body: Column(
+        children: <Widget>[
+          Text('Valor a pasar'),
+          TextField(
+            enabled:true,
+            maxLength: 10,
+            controller: _controller,
+          ),
+          RaisedButton(
+          child: Text("Click"),
+          onPressed: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => Second(informacion:_controller.text,)));
+          }),
+        ],
+        ),
+      );
+
+  }
+
+}

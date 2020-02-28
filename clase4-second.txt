@@ -1,0 +1,27 @@
+import 'package:flutter/material.dart';
+
+class Second extends StatelessWidget {
+  Second({@required this.informacion}):super();
+  String informacion =  'Hola mundo';
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Abar"),
+      ),
+      body: Column(
+        children: <Widget>[
+          Text('Second Activity $informacion'),
+          RaisedButton(
+            onPressed: (){
+
+            },
+          )
+        ],
+
+      ),
+    );
+  }
+
+}
